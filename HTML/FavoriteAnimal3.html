@@ -8,9 +8,35 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+         <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  </style>
     </head>
-    <body>
-        <div class="container" style="background-color:DeepSkyBlue;">
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#section1" data-toggle="tooltip" title="Links to other webpages">Links</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section2" data-toggle="tooltip" title="Learn more about Whale Sharks by clicking here!">Whale Shark Bio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section3" data-toggle="tooltip" title="Images of Whale Sharks">Images</a>
+    </li>
+  </ul>
+</nav>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+        <div id="section1" class="container" style="background-color:DeepSkyBlue;">
               <a href="https://www.nationalgeographic.com/animals/fish/w/whale-shark/" class="btn btn-info" role="button">National Geographic</a>
               <a href="https://www.worldwildlife.org/species/whale-shark" class="btn btn-info" role="button">WWF</a>
               <a href="https://en.wikipedia.org/wiki/Whale_shark" class="btn btn-info" role="button">Wikipedia</a>
@@ -47,5 +73,35 @@
                 <div class="col" style="background-color:Azure ;"><img src="https://media.mnn.com/assets/images/2017/11/WhaleSharkMouthMostlyClosedSwimmingOcean.jpg" alt="Whale Shark" width="400" height="200"><p>Whale Shark's are filter feeders, their diet consists of mostly plankton</p></div>
                 <div class="col" style="background-color:Azure ;"><img src="https://www.egypttoday.com/siteimages/Larg/11222.jpg" alt="Whale Shark" width="400" height="200"><p>Whale Shark's weigh on average about 41,000 lbs.</p></div>
         </div>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://fthmb.tqn.com/g2T7qNKj4ijElFBZOhRZ-fD2fpU=/768x0/filters:no_upscale()/feeding-whale-shark-159237041-572516985f9b589e34b1fe3f.jpg" alt="Whale Shark Feeding" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="https://fthmb.tqn.com/UCktSD3NO5y0EPbm8LCVIDgyOoU=/768x0/filters:no_upscale()/whale-shark-556984441-572551fe5f9b589e34dea489.jpg" alt="Whale Shark" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="https://fthmb.tqn.com/mu-3EYWcSEhrK5h4QNMpG5uCnv8=/768x0/filters:no_upscale()/freediver-and-whale-shark-rhincodon-typus-140659001-572550ac5f9b589e34de9934.jpg" alt="Whale Shark" width="1100" height="500">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
     </body>
 </html>
